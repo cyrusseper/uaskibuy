@@ -3,25 +3,8 @@
 
 "use client";
 
-
 import Image from "next/image";
-import { Metadata } from "next";
 import { useState } from "react";
-
-export const metadata: Metadata = {
-  title: "UaskIbuy — Exclusivity Delivered",
-  description:
-    "Luxury automobile sourcing and global import concierge. You ask. We buy. We deliver.",
-  openGraph: {
-    title: "UaskIbuy — Exclusivity Delivered",
-    description:
-      "Luxury automobile sourcing and global import concierge. You ask. We buy. We deliver.",
-    url: "https://uaskibuy.com",
-    siteName: "UaskIbuy",
-    type: "website",
-  },
-  icons: { icon: "/favicon.ico" },
-};
 
 const copy = {
   en: {
@@ -146,7 +129,6 @@ function LangToggle({ lang, setLang }: { lang: "en" | "es"; setLang: (l: "en" | 
 }
 
 export default function HomePage() {
-  // Client-only language toggle (simple, SSR-safe default = EN)
   const [lang, setLang] = useState<"en" | "es">("en");
   const t = copy[lang];
 
@@ -156,7 +138,6 @@ export default function HomePage() {
       <header className="sticky top-0 z-50 backdrop-blur supports-[backdrop-filter]:bg-black/40 bg-black/60 border-b border-white/10">
         <div className="mx-auto max-w-7xl px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            {/* Minimal logo mark */}
             <div className="h-9 w-9 rounded-full bg-gradient-to-br from-yellow-500 to-yellow-300 flex items-center justify-center text-black font-bold">U</div>
             <span className="font-serif text-xl tracking-wide">UaskIbuy</span>
           </div>
@@ -199,7 +180,6 @@ export default function HomePage() {
             </div>
             {/* Hero visual placeholder */}
             <div className="relative aspect-[16/10] w-full rounded-3xl border border-white/10 bg-gradient-to-br from-neutral-900 to-neutral-800 shadow-2xl">
-              {/* Optional: replace with real photography later */}
               <div className="absolute inset-0 flex items-end p-6">
                 <div className="text-white/60 text-sm">Hero image placeholder — luxury sedan silhouette</div>
               </div>
@@ -331,3 +311,4 @@ export default function HomePage() {
     </main>
   );
 }
+
