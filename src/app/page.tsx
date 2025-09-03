@@ -1,6 +1,9 @@
 // app/page.tsx — UaskIbuy.com luxury brochure homepage (English/Spanish)
 // TailwindCSS required. No external UI libs. App Router compatible.
 
+"use client";
+
+
 import Image from "next/image";
 import { Metadata } from "next";
 import { useState } from "react";
